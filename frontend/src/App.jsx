@@ -12,6 +12,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
+          <Route exact path='/' element={<Signin />}/>
           <Route exact path='/signup' element={<Signup />}/>
           <Route exact path='/signin' element={<Signin />}/>
           <Route exact path='/dashboard' element={<Dashboard />}/>

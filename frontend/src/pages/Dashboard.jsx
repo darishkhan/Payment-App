@@ -5,7 +5,6 @@ import UserList from '../components/UserList';
 
 const Dashboard = () => {
     const [balance, setBalance] = useState();
-    const [searchTerm, setSearchTerm] = useState();
 
     const getBalance = async ()=>{
         const response = await axios.get('http://localhost:3000/api/v1/account/balance', {
@@ -24,13 +23,13 @@ const Dashboard = () => {
     }, [balance])
 
   return (
-    <div>
+    <div className='bg-slate-400 px-20 min-h-screen'>
     <div className='flex justify-center p-5'>
         <Appbar balance={balance}></Appbar>
       
     </div>
     <div className='flex justify-center p-5'>
-        <UserList handleSearch={handleSearch}></UserList>
+        <UserList ></UserList>
     </div>
     </div>
   )

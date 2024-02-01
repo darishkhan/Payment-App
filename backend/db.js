@@ -12,7 +12,7 @@ try {
 connection();
 
 const userSchema = new mongoose.Schema({
-    username:{
+    username:{ 
         type: String,
         required:true,
         unique: true,
